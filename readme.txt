@@ -5,3 +5,4 @@ git commit 告诉git把文件提交到仓库
 git status 命令可以让我们时刻掌握仓库当前的状态
 git diff <文件名>  查看具体修改了什么内容
 git log 命令显示从最近到最远的提交日志  git log --pretty=oneline
+试试回退功能

@@ -25,4 +25,10 @@ git checkout -- file 把文件在工作区的修改全部撤销，这里有两�
 
 总之，就是让这个文件回到最近一次git commit或git add时的状态。
 
+git rm 用于删除一个文件
+
+ git remote add origin git@github.com:michaelliao/learngit.git  本地仓库关联github仓库
+
+
+把本地库的内容推送到远程，用git push命令  git push -u origin master
 

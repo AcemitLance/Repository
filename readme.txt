@@ -1,18 +1,28 @@
-git init   ���Ӳֿ�
-git add <�ļ���>   ���ļ����ӵ��ֿ�
-git commit ����git���ļ��ύ���ֿ�
-	-m����������Ǳ����ύ��˵�� �� git commit -m "������һ��"
-git status �������������ʱ�����ղֿ⵱ǰ��״̬
-git diff <�ļ���>  �鿴�����޸���ʲô����
-git log ������ʾ���������Զ���ύ��־  git log --pretty=oneline
-���Ի��˹���
-��Git�У���HEAD��ʾ��ǰ�汾����һ���汾����HEAD^������һ���汾����HEAD^^����Ȼ����100���汾д100��^�Ƚ�������������������д��HEAD~100��
-git reset --hard HEAD(��汾�Ż�HEAD^��)
-git reflog������¼���ÿһ������
+git init   添加仓库
+git add <文件名>   把文件添加到仓库
+git commit 告诉git把文件提交到仓库
+	-m后面输入的是本次提交的说明 如 git commit -m "添加了一行"
+git status 命令可以让我们时刻掌握仓库当前的状态
+git diff <文件名>  查看具体修改了什么内容
+git log 命令显示从最近到最远的提交日志  git log --pretty=oneline
+试试回退功能
+在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。
+git reset --hard HEAD(或版本号或HEAD^等)
+git reflog用来记录你的每一次命令
 
-Git�汾�������ӵ�ʱ���Ƿ�����ִ�еģ�
+Git版本库里添加的时候，是分两步执行的：
 
-��һ������git add���ļ����ӽ�ȥ��ʵ���Ͼ��ǰ��ļ��޸����ӵ��ݴ�����
+第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；
 
-�ڶ�������git commit�ύ���ģ�ʵ���Ͼ��ǰ��ݴ��������������ύ����ǰ��֧��
+第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。
+
+
+git checkout -- file 把文件在工作区的修改全部撤销，这里有两种情况：
+
+一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+
+一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+
+总之，就是让这个文件回到最近一次git commit或git add时的状态。
+
 

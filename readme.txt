@@ -32,3 +32,7 @@ git rm 用于删除一个文件
 
 把本地库的内容推送到远程，用git push命令  git push -u origin master
 
+git clone 克隆远程仓库到本地
+
+git checkout命令加上-b参数表示创建并切换分支 如git checkout -b dev
+git branch命令会列出所有分支，当前分支前面会标一个*号

@@ -38,3 +38,5 @@ git checkout命令加上-b参数表示创建并切换分支 如git checkout -b d
 git branch命令会列出所有分支，当前分支前面会标一个*号
 测试分支
 git checkout master 切换回主分支
+git merge命令用于合并指定分支到当前分支
+git branch -d <dev> 删除指定分支

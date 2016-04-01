@@ -40,3 +40,28 @@ git branch命令会列出所有分支，当前分支前面会标一个*号
 git checkout master 切换回主分支
 git merge命令用于合并指定分支到当前分支
 git branch -d <dev> 删除指定分支
+
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>   准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward：
+
+删除分支：git branch -d <name>
+
+用git log --graph命令可以看到分支合并图。
+git status查看工作区，就是干净的（除非有没有被Git管理的文件），因此可以放心地创建分支来修复bug。
+
+首先确定要在哪个分支上修复bug，假定需要在master分支上修复，就从master创建临时分支：
+
+git stash list命令刚才的工作现场存到哪去了
+工作现场还在，Git把stash内容存在某个地方了，但是需要恢复一下，有两个办法：
+
+一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+
+另一种方式是用git stash pop，恢复的同时把stash内容也删了：
+

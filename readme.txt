@@ -37,3 +37,4 @@ git clone 克隆远程仓库到本地
 git checkout命令加上-b参数表示创建并切换分支 如git checkout -b dev
 git branch命令会列出所有分支，当前分支前面会标一个*号
 测试分支
+git checkout master 切换回主分支
